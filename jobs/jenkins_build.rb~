@@ -37,13 +37,29 @@ def get_completion_percentage(job_name)
   ((current_duration * 100) / last_duration).round(0)
 end
  
-#Parses the JSON file produced by Jenkins
+#Parses the JSON file produced by Jenkins.
+#Only retrieves information about one specified build (the last one).
 def get_json_for_job(job_name, build = 'lastBuild')
   job_name = URI.encode(job_name)
   http = Net::HTTP.new(JENKINS_URI.host, JENKINS_URI.port)
   http.use_ssl = true
   http.verify_mode = OpenSSL::SSL::VERIFY_NONE
   request = Net::HTTP::Get.new($source + "job/#{job_name}/#{build}/api/json/") 
+  if JENKINS_AUTH['name']
+    request.basic_auth(JENKINS_AUTH['name'], JENKINS_AUTH['password'])
+  end
+  response = http.request(request)
+  JSON.parse(response.body)
+end
+
+#Same as get_json_for_job, only that it retrieves the info of all past builds (check the URL defined in the variable request).
+#Needed to get the build stability of the job.
+def get_json(job_name) 
+  job_name = URI.encode(job_name)
+  http = Net::HTTP.new(JENKINS_URI.host, JENKINS_URI.port)
+  http.use_ssl = true
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+  request = Net::HTTP::Get.new($source + "job/#{job_name}/api/json/")
   if JENKINS_AUTH['name']
     request.basic_auth(JENKINS_AUTH['name'], JENKINS_AUTH['password'])
   end
@@ -67,6 +83,7 @@ job_mapping.each do |title, jenkins_project|
     health = build_info_total["healthReport"]
     current_status = build_info["result"]
     building = build_info["building"]
+    color = build_info_total["color"]
     if current_status == "UNSTABLE"
         t = 0
         while health[t]["description"].split(" ")[0] != "Test" do
@@ -101,25 +118,11 @@ job_mapping.each do |title, jenkins_project|
       value: percent,
       health: descr["description"],
       icon: descr["iconUrl"],
-      building_info: building
+      building_info: building,
+      disabled: color
     })
     
   end
-end
-
-def get_json(job_name) 
-  job_name = URI.encode(job_name)
-  http = Net::HTTP.new(JENKINS_URI.host, JENKINS_URI.port)
-  http.use_ssl = true
-  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-  #http.ca_file = File.join("/home/helena/Desktop","NetworkAnalyzer.pem")
-  request = Net::HTTP::Get.new($source + "job/#{job_name}/api/json/")
-  if JENKINS_AUTH['name']
-    request.basic_auth(JENKINS_AUTH['name'], JENKINS_AUTH['password'])
-  end
-  response = http.request(request)
-  #puts "trying things out: " + response.body
-  JSON.parse(response.body)
 end
 
 

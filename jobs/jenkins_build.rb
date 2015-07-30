@@ -83,6 +83,7 @@ job_mapping.each do |title, jenkins_project|
     health = build_info_total["healthReport"]
     current_status = build_info["result"]
     building = build_info["building"]
+    color = build_info_total["color"]
     if current_status == "UNSTABLE"
         t = 0
         while health[t]["description"].split(" ")[0] != "Test" do
@@ -117,7 +118,8 @@ job_mapping.each do |title, jenkins_project|
       value: percent,
       health: descr["description"],
       icon: descr["iconUrl"],
-      building_info: building
+      building_info: building,
+      disabled: color #Not yet used, just provided in case you want to change the way the widget looks when it's disabled.
     })
     
   end
