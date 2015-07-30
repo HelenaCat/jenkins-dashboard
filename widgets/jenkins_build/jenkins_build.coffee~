@@ -4,6 +4,8 @@ class Dashing.JenkinsBuild extends Dashing.Widget
 #If you want to change the background color of the widget, the weather report, the stability text or the information about the last build, change it here.
 
   @accessor 'value', Dashing.AnimatedValue
+  
+  #Change the background color of the widget, according to the success of the build. Values are hex values.
   @accessor 'bgColor', ->
     if @get('currentResult') == "SUCCESS"
       "#10942B"
@@ -15,6 +17,8 @@ class Dashing.JenkinsBuild extends Dashing.Widget
       "#E3B912"
     else
       "#999"
+      
+  #Change the way the weather is displayed. Right now, the name of the icon is parsed and an image is shown accordingly.
   @accessor 'weather', ->
     if @get('icon') == "health-00to19.png"
        "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-00to19.gif"
@@ -26,6 +30,8 @@ class Dashing.JenkinsBuild extends Dashing.Widget
        "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-60to79.gif"
     else if @get('icon') == "health-80plus.png"
        "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-80plus.gif"
+ 
+  #Change the text about the stability of the builds.
   @accessor 'stability', ->
     if @get('building_info') == true
         "Building..."
@@ -53,14 +59,16 @@ class Dashing.JenkinsBuild extends Dashing.Widget
       meter.attr("data-fgcolor", meter.css("color"))
       meter.knob()
        
+  #Actions to be performed when new data is received.
   onData: (data) ->
     icon = $(@node).find(".icon")
     description = $(@node).find(".stability")
     if data.currentResult isnt data.lastResult
-      $(@node).fadeOut().css('background-color', @get('bgColor')).fadeIn()
-     icon.html($('<img src=\"' + @get('weather')  + '\" />'))
-     description.html(@get('stability'))
-      
+      $(@node).fadeOut().css('background-color', @get('bgColor')).fadeIn() #If the dashboard is restarted on the server-side, let the widget fade in again.
+     icon.html($('<img src=\"' + @get('weather')  + '\" />')) #Replace the icon text of the weather with the image, as replaced above.
+     description.html(@get('stability')) #Replace the description with the stability report (instead of the sentence, a ratio is shown, as defined above in the file).
+  
+  #Change the way the time stamp of the last build is shown.    
   Batman.Filters.dateFormat = (date) ->
     moment(date).format("DD-MM-YYYY HH:mm:ss")
  
