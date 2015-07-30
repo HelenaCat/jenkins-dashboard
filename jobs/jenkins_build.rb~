@@ -2,6 +2,7 @@ require 'net/http'
 require 'json'
 require 'time'
  
+#Change this to the URL of where Jenkins can be found
 $source = "https://na.be.alcatel-lucent.com/jenkins/"
  
 JENKINS_URI = URI.parse($source)
@@ -11,9 +12,9 @@ JENKINS_AUTH = {
   'password' => nil
 }
  
-# the key of this mapping must be a unique identifier for your job, the according value must be the name that is specified in jenkins
+# the key of this mapping must be a unique identifier for your job, the according value must be the name that is specified in Jenkins
 job_mapping = {
-  'naf-9.0' => { :job => 'naf-9.0'}, #:pre_job => 'PRE_BUILD'}
+  'naf-9.1.2-coverage' => { :job => 'naf-9.1.2-coverage'}, #:pre_job => 'PRE_BUILD'}
   'build-8.1' => { :job => 'build-8.1'},
   'e2e-NAC-8.2' => { :job => 'e2e-NAC-8.2'},
   'naf-9.1-sbi' => { :job => 'naf-9.1-sbi'},
@@ -36,23 +37,23 @@ def get_completion_percentage(job_name)
   ((current_duration * 100) / last_duration).round(0)
 end
  
+#Parses the JSON file produced by Jenkins
 def get_json_for_job(job_name, build = 'lastBuild')
   job_name = URI.encode(job_name)
   http = Net::HTTP.new(JENKINS_URI.host, JENKINS_URI.port)
   http.use_ssl = true
   http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-  #http.ca_file = File.join("/home/helena/Desktop","NetworkAnalyzer.pem")
-  request = Net::HTTP::Get.new($source + "job/#{job_name}/#{build}/api/json/") #{build}/  -> letterlijk voor api
+  request = Net::HTTP::Get.new($source + "job/#{job_name}/#{build}/api/json/") 
   if JENKINS_AUTH['name']
     request.basic_auth(JENKINS_AUTH['name'], JENKINS_AUTH['password'])
   end
   response = http.request(request)
-  #puts response.body
   JSON.parse(response.body)
 end
  
-
- 
+#Mapping of the variables parsed by JSON and the variables you wish to see.
+#If you wish to change the names of the variables (for example because the mapping is different in your version of Jenkins, do it here).
+#The name between quotes is the name as provided by the Jenkins API.
 job_mapping.each do |title, jenkins_project|
   current_status = nil
   descr = nil
@@ -66,8 +67,6 @@ job_mapping.each do |title, jenkins_project|
     health = build_info_total["healthReport"]
     current_status = build_info["result"]
     building = build_info["building"]
-    #color = build_info_total[]
-    #puts health
     if current_status == "UNSTABLE"
         t = 0
         while health[t]["description"].split(" ")[0] != "Test" do
@@ -92,27 +91,20 @@ job_mapping.each do |title, jenkins_project|
     else
       percent = 100
     end
- 
+
+#List of the variables you wish to send to your widgets. They are accessed through the data-bind tags in the jenkins_build.HTML-file and can be modified in the jenkins_build.coffee file as found in /widgets.
+#The values of these variables can be seen in history.yml.
     send_event(title, {
       currentResult: current_status,
       lastResult: last_status,
       timestamp: build_info["timestamp"],
       value: percent,
       health: descr["description"],
-      icon: descr["iconUrl"], #icon_h 
-      #type: descr["description"][0]
+      icon: descr["iconUrl"],
       building_info: building
     })
     
   end
-end
-
-def assign_icon(health_build,health_test,result)
-    if result == "UNSTABLE"
-        health_test
-    else
-        health_build
-    end
 end
 
 def get_json(job_name) 
