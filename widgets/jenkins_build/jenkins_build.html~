@@ -9,7 +9,7 @@
 
 
 <div>
-  <p class="health" data-bind="icon"></p>
+  <p class="icon" data-bind="icon"></p>
 </div>
  
 <div>

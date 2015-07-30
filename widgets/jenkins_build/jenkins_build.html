@@ -2,30 +2,30 @@
 </head>
 <body>
 
+<!--The title of the tile, the data is fetched via data-bind. The title that is shown is the key you defined in the /jobs/jenkins_build.rb file -->
 <div>
 <h1 class="title" data-bind="id"></h1>
 </div>
 
-
-
+<!--Display the weather icon. The way it is shown (the image) is changed in jenkins_build.coffee. If you want to change this image, replace the link there. -->
 <div>
   <p class="icon" data-bind="icon"></p>
 </div>
  
+<!--Show the build stability. The way it is shown (the ratio) is changed in jenkins_build.coffee. If you want to change this, replace the text there. -->
 <div>
   <p class="stability" data-bind="health"></p>
 </div>
 
- 
+<!--Display the meter showing the build progress. If you want a fully round meter, change data-angleArc to 360. If not, you can change the offset (where it starts) with the data-angleOffset value. The min and max value are fetched from the /dashboards/jenkins.erb file, so you can change them there if you want to.--> 
 <div>
   <input class="jenkins-build" data-angleOffset=-125 data-angleArc=250 data-width=130 data-readOnly=true data-bind-value="value | shortenedNumber" data-bind-data-min="min" data-bind-data-max="max" >
 </div>
 
-
-
 <div>
 <p class="last-build">Last build:</p>
 </div>  
+<!--Display the timestamp of the last build. The dateFormat view filter is defined in jenkins_build.coffee. If you'd like to display the time with AM/PM for example, change it there. -->
 <div>
 <p class="last-built" data-bind="timestamp | dateFormat"></p>
 </div>

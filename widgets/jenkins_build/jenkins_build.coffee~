@@ -1,5 +1,8 @@
 class Dashing.JenkinsBuild extends Dashing.Widget
- 
+
+#This file defines how the data, retrieved via data-bind is displayed on the widget.
+#If you want to change the background color of the widget, the weather report, the stability text or the information about the last build, change it here.
+
   @accessor 'value', Dashing.AnimatedValue
   @accessor 'bgColor', ->
     if @get('currentResult') == "SUCCESS"
@@ -24,7 +27,9 @@ class Dashing.JenkinsBuild extends Dashing.Widget
     else if @get('icon') == "health-80plus.png"
        "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-80plus.gif"
   @accessor 'stability', ->
-    if @get('health') == "Build stability: No recent builds failed."
+    if @get('building_info') == true
+        "Building..."
+    else if @get('health') == "Build stability: No recent builds failed."
         "No recent builds failed."
     else if @get('health') == "Build stability: All recent builds failed."
         "All recent builds failed."
@@ -34,8 +39,7 @@ class Dashing.JenkinsBuild extends Dashing.Widget
         @get('health').split(" ")[2] + "/" + @get('health').split(" ")[10] + " tests failed."
     else if @get('currentResult') == "FAILURE"
         @get('health').split(" ")[2] + "/" + @get('health').split(" ")[7] + " builds failed."
-    else
-        "Building..."
+
  
   constructor: ->
     super
