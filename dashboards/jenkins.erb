@@ -1,4 +1,5 @@
-<!-- -->
+<!--This file determines what tiles will be shown on the dashboard. If you wish to add a tile, simply copy one of the <li></li> blocks and change the data-id to the name that you defined in the jenkins_build.rb file (can be found in /jobs) -->
+<!--If you wish to have a tile at a specific location on the dashboard, you can change it using data-row and data-col or by dragging them around when the dashboard is running and then following the instructions or by changing the order of the <li></li> blocks (but these positions are relative, since all data-row and data-col values are 1 at the moment) -->
 <% content_for :title do %>The Jenkins dashboard<% end %>
 <div class="gridster">
   <ul>
