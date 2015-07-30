@@ -1,1 +1,1 @@
-Check out http://shopify.github.com/dashing for more information.
+Dashboard for the Jenkins CI, created during internship at Alcatel-Lucent in Antwerp.
