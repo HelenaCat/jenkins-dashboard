@@ -1,0 +1,37 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color: #9c4274;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.3);
+
+$jenkins-background:  darken($background-color, 15%);
+
+// ----------------------------------------------------------------------------
+// Widget-meter styles
+// ----------------------------------------------------------------------------
+.widget-jenkins {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+    position: relative;
+    z-index: 50;
+    margin-bottom: -50px;
+  }
+  
+  .more-info{
+    color: red;
+  }
+  
+  i.fa {
+    position: relative;
+    z-index: 10;
+    opacity: 0.1;
+    margin-top: 5px;
+  }
+
+}
+

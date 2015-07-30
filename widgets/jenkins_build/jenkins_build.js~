@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    
+    if(5>4){
+       $('.health').css("color","blue");
+    }
+
+});
+
+

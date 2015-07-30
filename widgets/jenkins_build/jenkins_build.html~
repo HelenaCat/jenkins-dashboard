@@ -1,0 +1,34 @@
+<head>
+</head>
+<body>
+
+<div>
+<h1 class="title" data-bind="id"></h1>
+</div>
+
+
+
+<div>
+  <p class="health" data-bind="icon"></p>
+</div>
+ 
+<div>
+  <p class="stability" data-bind="health"></p>
+</div>
+
+ 
+<div>
+  <input class="jenkins-build" data-angleOffset=-125 data-angleArc=250 data-width=130 data-readOnly=true data-bind-value="value | shortenedNumber" data-bind-data-min="min" data-bind-data-max="max" >
+</div>
+
+
+
+<div>
+<p class="last-build">Last build:</p>
+</div>  
+<div>
+<p class="last-built" data-bind="timestamp | dateFormat"></p>
+</div>
+
+
+</body>

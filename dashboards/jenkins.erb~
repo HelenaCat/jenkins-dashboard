@@ -1,0 +1,31 @@
+<!-- -->
+<% content_for :title do %>The Jenkins dashboard<% end %>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="naf-9.1-sbi" data-view="JenkinsBuild" data-title="Hello" data-min="0" data-max="100"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="naf-9.0" data-view="JenkinsBuild" data-title="Hello" data-min="0" data-max="100"></div>
+    </li>
+  
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="build-8.1" data-view="JenkinsBuild" data-title="Hello" data-min="0" data-max="100"></div>
+    </li>
+    
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="e2e-NAC-8.2" data-view="JenkinsBuild" data-title="Hello" data-min="0" data-max="100"></div>
+    </li>
+    
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="naf-9.1-coverage" data-view="JenkinsBuild" data-title="Hello" data-min="0" data-max="100"></div>
+    </li>
+   
+  </ul>
+
+</div>
+
+
+
+

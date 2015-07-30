@@ -1,0 +1,34 @@
+//class Dashing.Jenkins extends Dashing.Widget
+
+//  ready: ->
+//    # This is fired when the widget is done being rendered
+
+//  onData: (data) ->
+//    # Handle incoming data
+//    # You can access the html node of this widget with `@node`
+//    # Example: $(@node).fadeOut().fadeIn() will make the node flash each time data comes in.
+    
+class Dashing.Jenkins extends Dashing.Widget
+ 
+  @accessor 'bgColor', ->
+    if @get('currentResult') == "SUCCESS"
+      "#8EC15C"
+    else if @get('currentResult') == "FAILURE"
+      "#D26771"
+    else
+      "#999"
+ 
+  refreshLastRun: =>
+    if timestamp = @get('timestamp')
+      lastRun = moment(timestamp).fromNow();
+      @set('lastRunDateTime', "#{lastRun}")
+ 
+  ready: ->
+    @refreshLastRun()
+    $(@node).fadeOut().css('background-color',@get('bgColor')).fadeIn()
+ 
+  onData: (data) ->
+    @refreshLastRun()
+    if data.currentResult != data.lastResult
+      $(@node).fadeOut().css('background-color',@get('bgColor')).fadeIn()
+
