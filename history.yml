@@ -1,22 +1,23 @@
 ---
-buzzwords: ! 'data: {"items":[{"label":"Exit strategy","value":4},{"label":"Streamlininess","value":2},{"label":"Synergy","value":3},{"label":"Pivoting","value":1},{"label":"Paradigm
-  shift","value":1}],"id":"buzzwords","updatedAt":1438260085}
+buzzwords: ! 'data: {"items":[{"label":"Web 2.0","value":5},{"label":"Leverage","value":4},{"label":"Enterprise","value":7},{"label":"Paradigm
+  shift","value":4},{"label":"Pivoting","value":2},{"label":"Turn-key","value":9},{"label":"Exit
+  strategy","value":5},{"label":"Synergy","value":3},{"label":"Streamlininess","value":3}],"id":"buzzwords","updatedAt":1438261583}
 
 
 '
-valuation: ! 'data: {"current":74,"last":2,"id":"valuation","updatedAt":1438260085}
+valuation: ! 'data: {"current":90,"last":11,"id":"valuation","updatedAt":1438261583}
 
 
 '
-karma: ! 'data: {"current":53855,"last":46459,"id":"karma","updatedAt":1438260085}
+karma: ! 'data: {"current":145430,"last":109002,"id":"karma","updatedAt":1438261583}
 
 
 '
-synergy: ! 'data: {"value":80,"id":"synergy","updatedAt":1438260085}
+synergy: ! 'data: {"value":9,"id":"synergy","updatedAt":1438261583}
 
 
 '
-convergence: ! 'data: {"points":[{"x":11,"y":44},{"x":12,"y":10},{"x":13,"y":37},{"x":14,"y":32},{"x":15,"y":4},{"x":16,"y":42},{"x":17,"y":31},{"x":18,"y":42},{"x":19,"y":4},{"x":20,"y":10}],"id":"convergence","updatedAt":1438260083}
+convergence: ! 'data: {"points":[{"x":43,"y":19},{"x":44,"y":12},{"x":45,"y":43},{"x":46,"y":24},{"x":47,"y":36},{"x":48,"y":6},{"x":49,"y":38},{"x":50,"y":28},{"x":51,"y":2},{"x":52,"y":34}],"id":"convergence","updatedAt":1438261583}
 
 
 '
@@ -51,13 +52,13 @@ ana-1.0: ! 'data: {"currentResult":"SUCCESS","lastResult":"SUCCESS","timestamp":
 
 
 '
-build-8.1: ! 'data: {"currentResult":"FAILURE","lastResult":null,"timestamp":1408353735000,"value":100,"health":"Build
-  stability: 1 out of the last 5 builds failed.","icon":"health-60to79.png","building_info":false,"id":"build-8.1","updatedAt":1438260083}
+build-8.1: ! 'data: {"currentResult":"FAILURE","lastResult":"FAILURE","timestamp":1408353735000,"value":100,"health":"Build
+  stability: 1 out of the last 5 builds failed.","icon":"health-60to79.png","building_info":false,"disabled":"disabled","id":"build-8.1","updatedAt":1438350346}
 
 
 '
-e2e-NAC-8.2: ! 'data: {"currentResult":"UNSTABLE","lastResult":null,"timestamp":1434367867000,"value":100,"health":"Test
-  Result: 170 tests failing out of a total of 178 tests.","icon":"health-00to19.png","building_info":false,"id":"e2e-NAC-8.2","updatedAt":1438260083}
+e2e-NAC-8.2: ! 'data: {"currentResult":"UNSTABLE","lastResult":"UNSTABLE","timestamp":1434367867000,"value":100,"health":"Test
+  Result: 170 tests failing out of a total of 178 tests.","icon":"health-00to19.png","building_info":false,"disabled":"yellow","id":"e2e-NAC-8.2","updatedAt":1438350346}
 
 
 '
@@ -76,8 +77,8 @@ ngna-8.1-nacep-coverage: ! 'data: {"currentResult":"FAILURE","lastResult":"FAILU
 
 
 '
-naf-9.1-coverage: ! 'data: {"currentResult":"SUCCESS","lastResult":null,"timestamp":1438238416310,"value":100,"health":"Build
-  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"id":"naf-9.1-coverage","updatedAt":1438260084}
+naf-9.1-coverage: ! 'data: {"currentResult":"SUCCESS","lastResult":"SUCCESS","timestamp":1438310403000,"value":100,"health":"Build
+  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1-coverage","updatedAt":1438350346}
 
 
 '
@@ -86,13 +87,13 @@ ipm-9.1-sbi: ! 'data: {"currentResult":"BUILDING","lastResult":"BUILDING","times
 
 
 '
-naf-9.1-sbi: ! 'data: {"currentResult":"SUCCESS","lastResult":null,"timestamp":1438254836322,"value":100,"health":"Build
-  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"id":"naf-9.1-sbi","updatedAt":1438260083}
+naf-9.1-sbi: ! 'data: {"currentResult":"SUCCESS","lastResult":"SUCCESS","timestamp":1438338827692,"value":100,"health":"Build
+  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1-sbi","updatedAt":1438350346}
 
 
 '
-naf-9.1.2-coverage: ! 'data: {"currentResult":"SUCCESS","lastResult":null,"timestamp":1438245974314,"value":100,"health":"Build
-  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"id":"naf-9.1.2-coverage","updatedAt":1438260084}
+naf-9.1.2-coverage: ! 'data: {"currentResult":"BUILDING","lastResult":"BUILDING","timestamp":1438346768089,"value":50,"health":"Build
+  stability: No recent builds failed.","icon":"health-80plus.png","building_info":true,"disabled":"blue_anime","id":"naf-9.1.2-coverage","updatedAt":1438350347}
 
 
 '

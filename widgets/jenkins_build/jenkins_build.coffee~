@@ -7,7 +7,9 @@ class Dashing.JenkinsBuild extends Dashing.Widget
   
   #Change the background color of the widget, according to the success of the build. Values are hex values.
   @accessor 'bgColor', ->
-    if @get('currentResult') == "SUCCESS"
+    if @get('disabled') == "disabled"
+      "#414A5C"
+    else if @get('currentResult') == "SUCCESS"
       "#10942B"
     else if @get('currentResult') == "FAILURE"
       "#E32424"
@@ -35,6 +37,8 @@ class Dashing.JenkinsBuild extends Dashing.Widget
   @accessor 'stability', ->
     if @get('building_info') == true
         "Building..."
+    else if @get('disabled') == "disabled"
+        "Disabled"
     else if @get('health') == "Build stability: No recent builds failed."
         "No recent builds failed."
     else if @get('health') == "Build stability: All recent builds failed."
@@ -45,6 +49,7 @@ class Dashing.JenkinsBuild extends Dashing.Widget
         @get('health').split(" ")[2] + "/" + @get('health').split(" ")[10] + " tests failed."
     else if @get('currentResult') == "FAILURE"
         @get('health').split(" ")[2] + "/" + @get('health').split(" ")[7] + " builds failed."
+
 
  
   constructor: ->
@@ -68,7 +73,7 @@ class Dashing.JenkinsBuild extends Dashing.Widget
      icon.html($('<img src=\"' + @get('weather')  + '\" />')) #Replace the icon text of the weather with the image, as replaced above.
      description.html(@get('stability')) #Replace the description with the stability report (instead of the sentence, a ratio is shown, as defined above in the file).
   
-  #Change the way the time stamp of the last build is shown.    
+  #Change the way the time stamp of the last build is shown. Makes use of the moment.js library.
   Batman.Filters.dateFormat = (date) ->
     moment(date).format("DD-MM-YYYY HH:mm:ss")
  
