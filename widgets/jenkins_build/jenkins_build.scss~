@@ -33,6 +33,7 @@ $meter-background:  rgba(20, 20, 20, 1);
   
   .last-build {
     font-size: 20px;
+    color: white;
   }
   
   .last-built {

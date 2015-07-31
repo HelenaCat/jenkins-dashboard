@@ -53,12 +53,12 @@ ana-1.0: ! 'data: {"currentResult":"SUCCESS","lastResult":"SUCCESS","timestamp":
 
 '
 build-8.1: ! 'data: {"currentResult":"FAILURE","lastResult":"FAILURE","timestamp":1408353735000,"value":100,"health":"Build
-  stability: 1 out of the last 5 builds failed.","icon":"health-60to79.png","building_info":false,"disabled":"disabled","id":"build-8.1","updatedAt":1438350346}
+  stability: 1 out of the last 5 builds failed.","icon":"health-60to79.png","building_info":false,"disabled":"disabled","id":"build-8.1","updatedAt":1438351249}
 
 
 '
 e2e-NAC-8.2: ! 'data: {"currentResult":"UNSTABLE","lastResult":"UNSTABLE","timestamp":1434367867000,"value":100,"health":"Test
-  Result: 170 tests failing out of a total of 178 tests.","icon":"health-00to19.png","building_info":false,"disabled":"yellow","id":"e2e-NAC-8.2","updatedAt":1438350346}
+  Result: 170 tests failing out of a total of 178 tests.","icon":"health-00to19.png","building_info":false,"disabled":"yellow","id":"e2e-NAC-8.2","updatedAt":1438351249}
 
 
 '
@@ -77,8 +77,8 @@ ngna-8.1-nacep-coverage: ! 'data: {"currentResult":"FAILURE","lastResult":"FAILU
 
 
 '
-naf-9.1-coverage: ! 'data: {"currentResult":"SUCCESS","lastResult":"SUCCESS","timestamp":1438310403000,"value":100,"health":"Build
-  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1-coverage","updatedAt":1438350346}
+naf-9.1-coverage: ! 'data: {"currentResult":"SUCCESS","lastResult":null,"timestamp":1438310403000,"value":100,"health":"Build
+  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1-coverage","updatedAt":1438351240}
 
 
 '
@@ -88,12 +88,12 @@ ipm-9.1-sbi: ! 'data: {"currentResult":"BUILDING","lastResult":"BUILDING","times
 
 '
 naf-9.1-sbi: ! 'data: {"currentResult":"SUCCESS","lastResult":"SUCCESS","timestamp":1438338827692,"value":100,"health":"Build
-  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1-sbi","updatedAt":1438350346}
+  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1-sbi","updatedAt":1438351249}
 
 
 '
-naf-9.1.2-coverage: ! 'data: {"currentResult":"BUILDING","lastResult":"BUILDING","timestamp":1438346768089,"value":50,"health":"Build
-  stability: No recent builds failed.","icon":"health-80plus.png","building_info":true,"disabled":"blue_anime","id":"naf-9.1.2-coverage","updatedAt":1438350347}
+naf-9.1.2-coverage: ! 'data: {"currentResult":"BUILDING","lastResult":null,"timestamp":1438346768089,"value":62,"health":"Build
+  stability: No recent builds failed.","icon":"health-80plus.png","building_info":true,"disabled":"blue_anime","id":"naf-9.1.2-coverage","updatedAt":1438351240}
 
 
 '
