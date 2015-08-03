@@ -91,9 +91,9 @@ $(function () {
                     cursor : (this.$.data('cursor') === true && 30)
                                 || this.$.data('cursor')
                                 || 0,
-                    thickness : this.$.data('thickness') || 0.35,
+                    thickness : this.$.data('thickness') || 0.05,
                     width : this.$.data('width') || 200,
-                    height : this.$.data('height') || 200,
+                    height : this.$.data('height') || 100,
                     displayInput : this.$.data('displayinput') == null || this.$.data('displayinput'),
                     displayPrevious : this.$.data('displayprevious'),
                     fgColor : this.$.data('fgcolor') || '#87CEEB',
@@ -147,7 +147,8 @@ $(function () {
 
             this.$c = $('<canvas width="' +
                             this.o.width + 'px" height="' +
-                            this.o.height + 'px"></canvas>');
+                            this.
+                            o.height + 'px"></canvas>');
             this.c = this.$c[0].getContext("2d");
 
             this.$

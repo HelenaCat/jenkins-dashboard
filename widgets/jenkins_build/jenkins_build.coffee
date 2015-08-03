@@ -74,6 +74,7 @@ class Dashing.JenkinsBuild extends Dashing.Widget
       $(@node).fadeOut().css('background-color', @get('bgColor')).fadeIn() #If the dashboard is restarted on the server-side, let the widget fade in again.
      icon.html($('<img src=\"' + @get('weather')  + '\" />')) #Replace the icon text of the weather with the image, as replaced above.
      description.html(@get('stability')) #Replace the description with the stability report (instead of the sentence, a ratio is shown, as defined above in the file).
+
   
   #Change the way the time stamp of the last build is shown. Makes use of the moment.js library.
   Batman.Filters.dateFormat = (date) ->

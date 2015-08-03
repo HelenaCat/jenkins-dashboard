@@ -119,7 +119,7 @@ job_mapping.each do |title, jenkins_project|
       health: descr["description"],
       icon: descr["iconUrl"],
       building_info: building,
-      disabled: color
+      disabled: color #Not yet used, just provided in case you want to change the way the widget looks when it's disabled.
     })
     
   end

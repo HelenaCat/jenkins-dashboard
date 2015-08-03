@@ -22,7 +22,9 @@ class Dashing.JenkinsBuild extends Dashing.Widget
       
   #Change the way the weather is displayed. Right now, the name of the icon is parsed and an image is shown accordingly.
   @accessor 'weather', ->
-    if @get('icon') == "health-00to19.png"
+    if @get('disabled') == "disabled"
+       "http://www.slidepoint.net/_engine/images/clipart/stars/shape_square_black.png"
+    else if @get('icon') == "health-00to19.png"
        "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-00to19.gif"
     else if @get('icon') == "health-20to39.png"
        "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-20to39.gif"
@@ -60,8 +62,12 @@ class Dashing.JenkinsBuild extends Dashing.Widget
   ready: ->
       meter = $(@node).find(".jenkins-build")
       $(@node).fadeOut().css('background-color', @get('bgColor')).fadeIn()
-      meter.attr("data-bgcolor", meter.css("background-color"))
-      meter.attr("data-fgcolor", meter.css("color"))
+      if @get('building_info') == false
+        meter.attr("data-bgcolor", @get('bgColor'))
+        meter.attr("data-fgcolor", @get('bgColor'))
+      else
+        meter.attr("data-bgcolor", meter.css("background-color"))
+        meter.attr("data-fgcolor", meter.css("color"))
       meter.knob()
        
   #Actions to be performed when new data is received.
@@ -72,6 +78,7 @@ class Dashing.JenkinsBuild extends Dashing.Widget
       $(@node).fadeOut().css('background-color', @get('bgColor')).fadeIn() #If the dashboard is restarted on the server-side, let the widget fade in again.
      icon.html($('<img src=\"' + @get('weather')  + '\" />')) #Replace the icon text of the weather with the image, as replaced above.
      description.html(@get('stability')) #Replace the description with the stability report (instead of the sentence, a ratio is shown, as defined above in the file).
+
   
   #Change the way the time stamp of the last build is shown. Makes use of the moment.js library.
   Batman.Filters.dateFormat = (date) ->

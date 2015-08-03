@@ -1,0 +1,6 @@
+      if @get('building_info') == false
+        meter.attr("data-bgcolor", @get('bgColor'))
+        meter.attr("data-fgcolor", @get('bgColor'))
+      else
+        meter.attr("data-bgcolor", meter.css("background-color"))
+        meter.attr("data-fgcolor", meter.css("color"))

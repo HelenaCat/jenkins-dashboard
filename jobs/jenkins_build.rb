@@ -18,7 +18,7 @@ job_mapping = {
   'build-8.1' => { :job => 'build-8.1'},
   'e2e-NAC-8.2' => { :job => 'e2e-NAC-8.2'},
   'naf-9.1-sbi' => { :job => 'naf-9.1-sbi'},
-  'naf-9.1-coverage' => { :job => 'naf-9.1-coverage'}
+  'nacep-9.0' => { :job => 'nacep-9.0'}
 }
  
 def get_number_of_failing_tests(job_name)

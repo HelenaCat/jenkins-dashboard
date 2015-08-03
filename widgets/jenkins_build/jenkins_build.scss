@@ -17,6 +17,8 @@ $meter-background:  rgba(20, 20, 20, 1);
   input.jenkins-build {
     background-color: $meter-background;
     color: #fff;
+    width:20%;
+    height:20%;
   }
  
   .title {
