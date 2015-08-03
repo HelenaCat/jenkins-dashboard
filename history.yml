@@ -53,12 +53,12 @@ ana-1.0: ! 'data: {"currentResult":"SUCCESS","lastResult":"SUCCESS","timestamp":
 
 '
 build-8.1: ! 'data: {"currentResult":"FAILURE","lastResult":"FAILURE","timestamp":1408353735000,"value":100,"health":"Build
-  stability: 1 out of the last 5 builds failed.","icon":"health-60to79.png","building_info":false,"disabled":"disabled","id":"build-8.1","updatedAt":1438351249}
+  stability: 1 out of the last 5 builds failed.","icon":"health-60to79.png","building_info":false,"disabled":"disabled","id":"build-8.1","updatedAt":1438587254}
 
 
 '
 e2e-NAC-8.2: ! 'data: {"currentResult":"UNSTABLE","lastResult":"UNSTABLE","timestamp":1434367867000,"value":100,"health":"Test
-  Result: 170 tests failing out of a total of 178 tests.","icon":"health-00to19.png","building_info":false,"disabled":"yellow","id":"e2e-NAC-8.2","updatedAt":1438351249}
+  Result: 170 tests failing out of a total of 178 tests.","icon":"health-00to19.png","building_info":false,"disabled":"yellow","id":"e2e-NAC-8.2","updatedAt":1438587254}
 
 
 '
@@ -77,8 +77,8 @@ ngna-8.1-nacep-coverage: ! 'data: {"currentResult":"FAILURE","lastResult":"FAILU
 
 
 '
-naf-9.1-coverage: ! 'data: {"currentResult":"SUCCESS","lastResult":null,"timestamp":1438310403000,"value":100,"health":"Build
-  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1-coverage","updatedAt":1438351240}
+naf-9.1-coverage: ! 'data: {"currentResult":"SUCCESS","lastResult":"SUCCESS","timestamp":1438569605448,"value":100,"health":"Build
+  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1-coverage","updatedAt":1438587255}
 
 
 '
@@ -88,12 +88,121 @@ ipm-9.1-sbi: ! 'data: {"currentResult":"BUILDING","lastResult":"BUILDING","times
 
 '
 naf-9.1-sbi: ! 'data: {"currentResult":"SUCCESS","lastResult":"SUCCESS","timestamp":1438338827692,"value":100,"health":"Build
-  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1-sbi","updatedAt":1438351249}
+  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1-sbi","updatedAt":1438587254}
 
 
 '
-naf-9.1.2-coverage: ! 'data: {"currentResult":"BUILDING","lastResult":null,"timestamp":1438346768089,"value":62,"health":"Build
-  stability: No recent builds failed.","icon":"health-80plus.png","building_info":true,"disabled":"blue_anime","id":"naf-9.1.2-coverage","updatedAt":1438351240}
+naf-9.1.2-coverage: ! 'data: {"currentResult":"SUCCESS","lastResult":"SUCCESS","timestamp":1438566363624,"value":100,"health":"Build
+  stability: No recent builds failed.","icon":"health-80plus.png","building_info":false,"disabled":"blue","id":"naf-9.1.2-coverage","updatedAt":1438587255}
+
+
+'
+bbc: ! 'data: {"headlines":[{"title":"Greek shares ''set to plunge 20%''","description":"The
+  Athens Stock Exchange is set to plunge by as much as 20% on Monday when trading
+  finally resumes after a five-week closure, traders predict."},{"title":"Obama to
+  unveil clean energy plan","description":"US President Barack Obama is set to unveil
+  what he calls \"the biggest, most important step we have ever taken\" in tackling
+  climate change."},{"title":"Saudi king cuts short French holiday","description":"King
+  Salman of Saudi Arabia cuts short a holiday on the French Riviera where the closure
+  of a beach for his security caused an uproar."},{"title":"Nigerian army frees Boko
+  captives","description":"Nigeria''s army says it has rescued 178 people, more than
+  100 of them children, from Boko Haram militants in the north-east of the country."},{"title":"HK
+  protest over ''breast as weapon''","description":"Bra-wearing men and women stage
+  a protest in Hong Kong after a woman is jailed for assaulting a police officer with
+  her breast."},{"title":"Mexican photojournalist found dead","description":"A Mexican
+  photojournalist who said he was being threatened and harassed is found shot dead
+  with four other people in a flat in Mexico City."},{"title":"Crash grounds Russian
+  helicopters","description":"The Russian defence ministry grounds its fleet of Mi-28
+  attack helicopters after a fatal accident at an air show on Sunday."},{"title":"More
+  than 100 killed in India floods","description":"Heavy monsoon rains in India kill
+  more than 100 people in the past week and force tens of thousands of people to take
+  shelter in relief camps, India''s home ministry has said."},{"title":"Zimbabwe seeks
+  second ''lion killer''","description":"Zimbabwe says it is seeking a second American
+  over the illegal killing of a lion, as the outcry over the death of famed animal
+  Cecil continues."},{"title":"Australian Speaker Bishop quits","description":"The
+  speaker of the lower house of the Australian parliament, Bronwyn Bishop, resigns
+  over an expenses scandal."},{"title":"Viagra ''added to Chinese alcohol''","description":"Two
+  distillers in China added Viagra to thousands of bottles of spirits and told customers
+  it had \"health-preserving qualities\", food officials say."},{"title":"IOC recognises
+  ''Ultimate Frisbee''","description":"Flying disc sports, including Ultimate Frisbee,
+  are officially recognised by the International Olympic Committee (IOC)."},{"title":"Canadian
+  PM calls general election","description":"Canadian Prime Minister Stephen Harper
+  announces he is dissolving parliament and calling a parliamentary election for 19
+  October."},{"title":"Empire State hosts wildlife display","description":"Images
+  of endangered animals are flashed across the Empire State Building in New York to
+  highlight the issue of potential mass extinction."},{"title":"Colombia military
+  air crash kills 11","description":"A plane from Colombia''s air force crashes in
+  the north of the country, killing all 11 of those on board."},{"title":"From tears
+  to cheers for Flores","description":"Wilmer Flores hits the winning run for New
+  York Mets days after crying because he thought he was going to be traded."},{"title":"Attackers
+  kill Burundi leader''s aide","description":"A close aide of Burundi''s President
+  Pierre Nkurunziza is killed in an attack on his car in the capital, Bujumbura."},{"title":"South
+  Sudan becomes Olympic member","description":"South Sudan will compete at Rio 2016
+  after becoming the 206th member of the Olympic movement."},{"title":"Call to widen
+  MH370 debris hunt","description":"Malaysia urges other Indian Ocean islands to be
+  on the lookout for more possible MH370 debris, after a wing part washes up on Reunion."},{"title":"HSBC''s
+  profit up 10% in first half","description":"Profit at HSBC, Europe''s largest bank,
+  was up 10% in the first half of this year compared with a year ago on strong earnings
+  in Hong Kong."},{"title":"Plan to evict failed asylum seekers","description":"Landlords
+  will be expected to evict tenants who lose the right to live in England under new
+  measures to clamp down on illegal immigration."},{"title":"Suicide attack hits Turkish
+  troops","description":"Two Turkish soldiers are killed and dozens are wounded in
+  a suicide attack near the border with Iran blamed on Kurdish PKK militants."},{"title":"Israel
+  teen stabbed at Gay Pride dies","description":"A teenage girl stabbed at a Gay Pride
+  march in Jerusalem on Thursday dies from her wounds, doctors say."},{"title":"Dozens
+  face ''terror'' trial in UAE","description":"Authorities in the United Arab Emirates
+  say 41 people will go on trial for trying to \"seize power and establish a caliphate\"
+  in the Gulf nation."},{"title":"Tributes to ''huge talent'' Cilla Black","description":"Tributes
+  are paid to singer and TV star Cilla Black following her death at the age of 72,
+  as a post-mortem examination is due to take place."},{"title":"£3m plan to tackle
+  Rotherham abuse","description":"Barnardo''s receives £3m to fund a team of specialists
+  to tackle child sex abuse in South Yorkshire."},{"title":"China factory activity
+  shrinks again","description":"Factory activity in the world''s second largest economy,
+  China, shrank the most in two years in July as new orders fell more than expected."},{"title":"Asian
+  markets lower on China data","description":"Asian shares start August lower as disappointing
+  economic data from the US and China weighed on investors'' confidence."},{"title":"Government
+  may begin RBS sale","description":"The Treasury could begin the process of selling
+  part of the government''s stake in Royal Bank of Scotland from Monday, according
+  to BBC sources."},{"title":"Arsenal overcame big hurdle - Wenger","description":"Arsenal
+  boss Arsene Wenger believes his players overcame a big psychological hurdle by beating
+  Chelsea in the Community Shield."},{"title":"Minichiello queries lack of action","description":"Jessica
+  Ennis-Hill''s coach Toni Minichiello asks why the IAAF did not act on data appearing
+  to expose widespread doping in athletics."},{"title":"Di Maria set to have PSG medical","description":"Manchester
+  United''s Angel Di Maria will have a medical in the next 24 hours before a proposed
+  £44.5m move to Paris St-Germain."},{"title":"TV star Cilla Black dies aged 72","description":"Singer
+  and TV star Cilla Black, who enjoyed a 50-year showbusiness career, dies at her
+  home in southern Spain."},{"title":"Fantastic Four ''haven''t seen'' film","description":"The
+  cast of the new Marvel reboot admit they''ve yet to see the film, despite it coming
+  out in a few days."},{"title":"US festival ends early after storms","description":"The
+  final day of Lollapalooza music festival ends early after a second severe storm
+  threatened Chicago."},{"title":"VIDEO: Concerns over athletics doping crisis","description":"The
+  World Anti-Doping Agency says it is alarmed by claims that cheating may have been
+  rife at some of the world''s biggest athletics events."},{"title":"VIDEO: Teenager
+  stabbed at Gay Pride march dies","description":"A teenager who was attacked at a
+  Gay Pride march in Jerusalem last week dies from her injuries."},{"title":"VIDEO:
+  The tram that survived Hiroshima","description":"A tram that survived the Hiroshima
+  atomic bomb attack blast, has now been restored."},{"title":"VIDEO: Why Myanmar
+  has seen such heavy rainfall","description":"BBC weather presenter Ben Rich explains
+  why Myanmar has seen so much rainfall and where the bad weather is heading next."},{"title":"VIDEO:
+  From prisoner to programmer","description":"A group of former prisoners in South
+  Africa are teaching other prisoners how to code, to help them find work on the outside."},{"title":"VIDEO:
+  ''Bad things happen to good robots''","description":"A hitchhiking robot, HitchBOT,
+  who has spent weeks travelling around Europe and Canada is smashed to pieces two
+  weeks after arriving in the United States."},{"title":"VIDEO: Singapore''s changing
+  landscape","description":"Singapore''s skyline has dramatically changed in the past
+  50 years, reflecting changes in the fortunes of the country."},{"title":"VIDEO:
+  BBC presenters dancing with lions","description":"Chinese lions, oranges and drummers
+  help BBC Newsday presenters Rico Hizon and Sharanjit Leyl, celebrate the opening
+  of the BBC''s new studio in Singapore."},{"title":"How a group of grannies got their
+  first holiday","description":"How a group of grannies funded their first trip to
+  the sea"},{"title":"Click here to hack the network","description":"What does it
+  take to be an ethical hacker?"},{"title":"Joshua Wong: ''We had no clear goals''
+  in Hong Kong protests","description":"What became of Hong Kong''s youngest protest
+  leader"},{"title":"Ending the cycle of gang violence in El Salvador","description":"Tackling
+  gang violence in El Salvador with faith and factories"},{"title":"Indian tea-seller
+  who hawks his books on Amazon","description":"India''s roadside tea seller who hawks
+  his novels on Amazon"},{"title":"Atari''s boss on why life is ''a game''","description":"Atari''s
+  founder on treating business like a game"}],"id":"bbc","updatedAt":1438586650}
 
 
 '
