@@ -193,6 +193,14 @@ h3 {
   right: 0;
 }
 
+.newsgridster {
+  margin: auto;
+}
+
+.hello1 {
+  color: red;
+}
+
 #save-gridster {
   display: none;
   position: fixed;
@@ -247,6 +255,10 @@ h3 {
   padding-top: 5px;
 }
 
+.gridster li {
+    overfow: hidden;
+    display: list-item;
+}
 
 // ----------------------------------------------------------------------------
 // Clearfix
