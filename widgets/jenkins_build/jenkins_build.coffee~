@@ -8,7 +8,7 @@ class Dashing.JenkinsBuild extends Dashing.Widget
   #Change the background color of the widget, according to the success of the build. Values are hex values.
   @accessor 'bgColor', ->
     if @get('disabled') == "disabled"
-      "#414A5C"
+      "#050505"
     else if @get('currentResult') == "SUCCESS"
       "#10942B"
     else if @get('currentResult') == "FAILURE"

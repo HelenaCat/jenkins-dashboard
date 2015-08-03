@@ -22,7 +22,9 @@ class Dashing.JenkinsBuild extends Dashing.Widget
       
   #Change the way the weather is displayed. Right now, the name of the icon is parsed and an image is shown accordingly.
   @accessor 'weather', ->
-    if @get('icon') == "health-00to19.png"
+    if @get('disabled') == "disabled"
+       "http://www.slidepoint.net/_engine/images/clipart/stars/shape_square_black.png"
+    else if @get('icon') == "health-00to19.png"
        "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-00to19.gif"
     else if @get('icon') == "health-20to39.png"
        "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-20to39.gif"
