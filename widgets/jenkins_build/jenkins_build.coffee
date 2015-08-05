@@ -25,15 +25,15 @@ class Dashing.JenkinsBuild extends Dashing.Widget
     if @get('disabled') == "disabled"
        "http://www.slidepoint.net/_engine/images/clipart/stars/shape_square_black.png"
     else if @get('icon') == "health-00to19.png"
-       "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-00to19.gif"
+       "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-00to19.png"
     else if @get('icon') == "health-20to39.png"
-       "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-20to39.gif"
+       "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-20to39.png"
     else if @get('icon') == "health-40to59.png" 
-       "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-40to59.gif"
+       "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-40to59.png"
     else if @get('icon') == "health-60to79.png"
-       "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-60to79.gif"
+       "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-60to79.png"
     else if @get('icon') == "health-80plus.png"
-       "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-80plus.gif"
+       "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-80plus.png"
  
   #Change the text about the stability of the builds.
   @accessor 'stability', ->
