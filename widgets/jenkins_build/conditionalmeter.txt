@@ -4,3 +4,75 @@
       else
         meter.attr("data-bgcolor", meter.css("background-color"))
         meter.attr("data-fgcolor", meter.css("color"))
+        
+        
+        
+  @accessor 'color-m', ->
+    if @get('building_info') == false
+        #FFFFFF
+    else
+        
+        
+  @accessor 'background-color-m', ->
+    if @get('building_info') == false
+        #000000
+    else
+        @get('bgColor')
+ -------------------------------------------------       
+        
+  @accessor 'color-m', ->
+    if @get('building_info') == true
+       "#FFFFFF"
+    else if @get('disabled') == "disabled"
+       "#050505"
+    else if @get('currentResult') == "SUCCESS"
+       "#10942B"
+    else if @get('currentResult') == "FAILURE"
+       "#E32424"
+    else if @get('currentResult') == "PREBUILD"
+       "#ff9618"
+    else if @get('currentResult') == "UNSTABLE"
+       "#E3B912"
+    else
+       "#999"
+        
+  @accessor 'background-color-m', ->
+    if @get('building_info') == true
+       "#000000"
+    else if @get('disabled') == "disabled"
+       "#050505"
+    else if @get('currentResult') == "SUCCESS"
+       "#10942B"
+    else if @get('currentResult') == "FAILURE"
+       "#E32424"
+    else if @get('currentResult') == "PREBUILD"
+       "#ff9618"
+    else if @get('currentResult') == "UNSTABLE"
+       "#E3B912"
+    else
+       "#999"
+ 
+  constructor: ->
+    super
+    @observe 'value', (value) ->
+      $(@node).find(".jenkins-build").val(value).trigger('change')
+ 
+  ready: ->
+      meter = $(@node).find(".jenkins-build")
+      $(@node).fadeOut().css('background-color', @get('bgColor')).fadeIn()
+      meter.attr("data-bgcolor", @get('background-color-m'))
+      meter.attr("data-fgcolor", @get('color-m'))
+      meter.knob()
+       
+  #Actions to be performed when new data is received.
+  onData: (data) ->
+    icon = $(@node).find(".icon")
+    description = $(@node).find(".stability")
+    meter = $(@node).find(".jenkins-build")
+    if data.currentResult isnt data.lastResult
+      $(@node).fadeOut().css('background-color', @get('bgColor')).fadeIn() 
+      $(@node).find(".jenkins-build").hide()
+     icon.html($('<img src=\"' + @get('weather')  + '\" />')) 
+     description.html(@get('stability')) 
+      #("data-bgcolor", @get('background-color-m'))
+     metercolor.attr("data-fgcolor", @get('color-m'))
