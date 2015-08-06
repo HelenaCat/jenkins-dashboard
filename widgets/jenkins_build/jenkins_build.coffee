@@ -21,19 +21,22 @@ class Dashing.JenkinsBuild extends Dashing.Widget
       "#999"
       
   #Change the way the weather is displayed. Right now, the name of the icon is parsed and an image is shown accordingly.
+  #Note: the local (Alcatel-Lucent) links didn't seem to work on the tv screen, so the other ones were added. Just change the source to the one you wish.
   @accessor 'weather', ->
+    source = "https://svn.jenkins-ci.org/tags/hudson-1_162/hudson/main/war/resources/images/32x32/health-"
+    #source = "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-"
     if @get('disabled') == "disabled"
        "http://www.slidepoint.net/_engine/images/clipart/stars/shape_square_black.png"
     else if @get('icon') == "health-00to19.png"
-       "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-00to19.png"
+       source + "00to19.gif"
     else if @get('icon') == "health-20to39.png"
-       "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-20to39.png"
+       source + "20to39.gif"
     else if @get('icon') == "health-40to59.png" 
-       "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-40to59.png"
+       source + "40to59.gif"
     else if @get('icon') == "health-60to79.png"
-       "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-60to79.png"
+      source + "60to79.gif"
     else if @get('icon') == "health-80plus.png"
-       "https://na.be.alcatel-lucent.com/jenkins/static/e3d393b8/images/32x32/health-80plus.png"
+       source + "80plus.gif"
  
   #Change the text about the stability of the builds.
   @accessor 'stability', ->
