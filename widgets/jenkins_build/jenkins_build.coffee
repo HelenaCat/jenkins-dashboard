@@ -54,19 +54,6 @@ class Dashing.JenkinsBuild extends Dashing.Widget
         @get('health').split(" ")[2] + "/" + @get('health').split(" ")[10] + " tests failed."
     else if @get('currentResult') == "FAILURE"
         @get('health').split(" ")[2] + "/" + @get('health').split(" ")[7] + " builds failed."
-
-
-  @accessor 'color-m', ->
-    if @get('building_info') == true
-        "#FFFFFF"
-    else
-        @get('bgColor')
-        
-  @accessor 'background-color-m', ->
-    if @get('building_info') == true
-        "#000000"
-    else
-        @get('bgColor')
  
   constructor: ->
     super
