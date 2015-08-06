@@ -24,13 +24,14 @@ job_mapping = {
   'naf-9.0' => { :job => 'naf-9.0'},
   'naf-9.1.2-coverage' => { :job => 'naf-9.1.2-coverage'},
   'build-9.1-ivy2mvn' => { :job => 'build-9.1-ivy2mvn'},
- # 'Build a alu-rp RPM for ALU-RP 9.2' => { :job => 'Build a alu-rp RPM for ALU-RP 9.2'},
- # 'Build a xtrabackup RPM for ALU-RP 9.2' => { :job => 'Build a xtrabackup RPM for ALU-RP 9.2'},
   'naf-9.1-next-coverage' => { :job => 'naf-9.1-next-coverage'},
   'ipm-9.1-ivy2mvn' => { :job => 'ipm-9.1-ivy2mvn'},
   'sdcna-9.1.2' => { :job => 'sdcna-9.1.2'},
   'ipm-9.1.2' => { :job => 'ipm-9.1.2'},
-  'naf-9.1.2' => { :job => 'naf-9.1.2'}
+  'naf-9.1.2' => { :job => 'naf-9.1.2'},
+  'nacep-9.1.2' => { :job => 'nacep-9.1.2'},
+  'naf-9.1' => { :job => 'naf-9.1'},
+  'naf-9.1-coverage' => { :job => 'naf-9.1-coverage'}
 }
  
 def get_number_of_failing_tests(job_name)

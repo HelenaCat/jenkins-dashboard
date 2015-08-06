@@ -5,7 +5,8 @@ require 'nokogiri'
 require 'htmlentities'
 
 news_feeds = {
-  "bbc" => "http://feeds.bbci.co.uk/news/world/rss.xml?edition=uk" #"http://seattletimes.com/rss/home.xml",
+  "bbc" => "http://feeds.bbci.co.uk/news/world/rss.xml?edition=uk",
+  "standaard" => "www.standaard.be/rss/section/1f2838d4-99ea-49f0-9102-138784c7ea7c"
 }
 
 Decoder = HTMLEntities.new
