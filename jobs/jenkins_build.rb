@@ -14,25 +14,24 @@ JENKINS_AUTH = {
  
 # the key of this mapping must be a unique identifier for your job, the according value must be the name that is specified in Jenkins
 job_mapping = {
-  'naf-9.1.2-coverage' => { :job => 'naf-9.1.2-coverage'}, #:pre_job => 'PRE_BUILD'}
-  'build-8.1' => { :job => 'build-8.1'},
-  'e2e-NAC-8.2' => { :job => 'e2e-NAC-8.2'},
-  'naf-9.1-sbi' => { :job => 'naf-9.1-sbi'},
-  'nacep-9.0' => { :job => 'nacep-9.0'},
-  'ana-1.0' => { :job => 'ana-1.0'},
-  'naf-9.1-next-coverage' => { :job => 'naf-9.1-next-coverage'},
+#  'naf-9.1.2-coverage' => { :job => 'naf-9.1.2-coverage'}, :pre_job => 'PRE_BUILD'}
+  '9.1-hibernate3-sdcna' => { :job => '9.1-hibernate3-sdcna'},
   'naf-9.0' => { :job => 'naf-9.0'},
-  'naf-9.1.2-coverage' => { :job => 'naf-9.1.2-coverage'},
-  'build-9.1-ivy2mvn' => { :job => 'build-9.1-ivy2mvn'},
-  'naf-9.1-next-coverage' => { :job => 'naf-9.1-next-coverage'},
-  'ipm-9.1-ivy2mvn' => { :job => 'ipm-9.1-ivy2mvn'},
-  'sdcna-9.1.2' => { :job => 'sdcna-9.1.2'},
-  'ipm-9.1.2' => { :job => 'ipm-9.1.2'},
-  'naf-9.1.2' => { :job => 'naf-9.1.2'},
-  'nacep-9.1.2' => { :job => 'nacep-9.1.2'},
-  'naf-9.1' => { :job => 'naf-9.1'},
-  'naf-9.1-coverage' => { :job => 'naf-9.1-coverage'},
-  'naf-9.1-next' => { :job => 'naf-9.1-next'}
+  'nacep-9.0' => { :job => 'nacep-9.0'},
+  'sdcna-9.0' => { :job => 'sdcna-9.0'},
+  'ana-1.0' => { :job => 'ana-1.0'},
+#  'naf-9.1-next-coverage' => { :job => 'naf-9.1-next-coverage'},
+#  'naf-9.0' => { :job => 'naf-9.0'},
+#  'build-9.1-ivy2mvn' => { :job => 'build-9.1-ivy2mvn'},
+#  'naf-9.1-next-coverage' => { :job => 'naf-9.1-next-coverage'},
+#  'ipm-9.1-ivy2mvn' => { :job => 'ipm-9.1-ivy2mvn'},
+#  'sdcna-9.1.2' => { :job => 'sdcna-9.1.2'},
+#  'ipm-9.1.2' => { :job => 'ipm-9.1.2'},
+#  'naf-9.1.2' => { :job => 'naf-9.1.2'},
+#  'nacep-9.1.2' => { :job => 'nacep-9.1.2'},
+#  'naf-9.1' => { :job => 'naf-9.1'},
+#  'naf-9.1-coverage' => { :job => 'naf-9.1-coverage'},
+#  'naf-9.1-next' => { :job => 'naf-9.1-next'}
 }
  
 def get_number_of_failing_tests(job_name)
